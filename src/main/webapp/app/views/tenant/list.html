@@ -1,0 +1,29 @@
+<div class="col-md-12 col-sm-12 col-xs-12">
+  <div class="x_panel">
+    <div class="x_title">
+      <h2>Listado de instancias</h2>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="x_content">
+      <table class="table table-striped responsive-utilities jambo_table bulk_action">
+        <thead>
+          <tr class="headings">
+            <th ng-repeat="header in headers" class="column-title" ng-bind="header"> </th>
+            <th class="column-title no-link last"><span class="nobr">Acciones</span> </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-class-odd="'odd'" ng-class-even="'even'" class="pointer" ng-repeat="tenant in tenants">
+            <td ng-repeat="header in headers">{{tenant[header]}}</td>
+            <td class="last">
+            	<a href="javascript:void(0)" ng-click="deleteT(tenant);">Delete</a>|
+            	<a href="javascript:void(0)" ng-click="toggleActiation(tenant);">{{!tenant.isActive? 'Activate':'Deactivate'}}</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
