@@ -16,6 +16,7 @@
 	 		  	"fbId": fbId
 	 		  		
 	       	};
+   	 	};
     };
     function tenantService($http, $q, routesUrls) {
 
