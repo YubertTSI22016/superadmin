@@ -20,6 +20,30 @@
           <input type="text" id="domain" name="domain" ng-model="tenantTmp.domain" ng-value="{{tenantTmp.domain}}" class="form-control col-md-7 col-xs-12">
         </div>
       </div>
+       <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="domain">Tipo: <span class="required">*</span>
+        </label>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+        	<select id="tipo" name="tipo"  ng-model="tenantTmp.tenantType" class="form-control col-md-7 col-xs-12">
+        		<option value="transporte">Transporte</option>
+        		<option value="servicio">Servicio</option>
+        	</select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="domain">FbID
+        </label>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <input type="text" id="fb-id" name="fb-id" ng-model="tenantTmp.fbId" ng-value="{{tenantTmp.fbId}}" class="form-control col-md-7 col-xs-12">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="domain">FbSecret
+        </label>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <input type="text" id="fb-secret" name="fb-secret" ng-model="tenantTmp.fbSecret" ng-value="{{tenantTmp.fbSecret}}" class="form-control col-md-7 col-xs-12">
+        </div>
+      </div>
       <div class="ln_solid"></div>
       <div class="form-group">
         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">

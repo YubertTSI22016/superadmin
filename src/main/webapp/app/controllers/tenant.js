@@ -3,13 +3,17 @@
     angular.module('lacbus').controller('tenantCtrl', ['$scope','$timeout','tenantSrv', tenantCtrl]);
     function tenantCtrl($scope,$timeout, service) {
     	$scope.tenants = [];
-    	var factory = function(name, domain, id, isActive, isDelete){
-	       	return{
+    	var factory = function(name, domain, id, isActive, isDelete, tenantType, fbSecret, fbId){
+	       	return{ 
 	       		"name": name,
 	 		  	"domain": domain,
 	 		  	"id": id,
 	 		  	"isActive": isActive,
-	 		  	"isDelete": isDelete
+	 		  	"isDelete": isDelete,
+	 		  	"tenantType": tenantType,
+	 		  	"fbSecret": fbSecret,
+	 		  	"fbId": fbId
+	 		  		
 	       	};		  
 	   	 };
 	   	 

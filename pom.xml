@@ -19,14 +19,14 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>lcbs</groupId>
-    <artifactId>lcbssadmin</artifactId>
+    <groupId>yuber</groupId>
+    <artifactId>yubersadmin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>lcbssadmin</name>
-    <description>lcbssadmin</description>
+    <name>yubersadmin</name>
+    <description>yubersadmin</description>
 
-    <url>lcbssadmin</url>
+    <url>yubersadmin</url>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>

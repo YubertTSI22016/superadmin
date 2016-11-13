@@ -4,15 +4,18 @@
     angular.module('lacbus').factory('tenantFry', tenantFactory); 
    
     var tenantFactory = function(){
-   	 return function(name, domain, id, isActive, isDelete){
-       	return{
-       		"name": name,
- 		  	"domain": domain,
- 		  	"id": id,
- 		  	"isActive": isActive,
- 		  	"isDelete": isDelete
-       	};		  
-   	 };
+   	 return function(name, domain, id, isActive, isDelete, tenantType, fbSecret, fbId){
+	       	return{ 
+	       		"name": name,
+	 		  	"domain": domain,
+	 		  	"id": id,
+	 		  	"isActive": isActive,
+	 		  	"isDelete": isDelete,
+	 		  	"tenantType": tenantType,
+	 		  	"fbSecret": fbSecret,
+	 		  	"fbId": fbId
+	 		  		
+	       	};
     };
     function tenantService($http, $q, routesUrls) {
 
