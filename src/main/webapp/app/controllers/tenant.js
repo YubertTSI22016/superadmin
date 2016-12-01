@@ -1,7 +1,7 @@
 (function () {
     'use strict';
-    angular.module('lacbus').controller('tenantCtrl', ['$scope','$timeout','tenantSrv', tenantCtrl]);
-    function tenantCtrl($scope,$timeout, service) {
+    angular.module('lacbus').controller('tenantCtrl', ['$scope','$timeout','tenantSrv', 'toastr', '$location', tenantCtrl]);
+    function tenantCtrl($scope,$timeout, service, toastr, $location) {
     	$scope.tenants = [];
     	var factory = function(name, domain, id, isActive, isDelete, tenantType, fbSecret, fbId){
 	       	return{ 
@@ -22,7 +22,8 @@
     	$scope.headers = Object.keys($scope.tenantTmp);
     	$scope.create = function(){
     		service.create($scope.tenantTmp).then(function(data){
-    			console.info(data);
+    			$location.url('/tenant');
+     			toastr.success("Tenant creado con exito", "Accion");
     		});
     	};
     	$scope.list= function(){
@@ -41,6 +42,7 @@
     		service.activate(tenant).then(function(status){
     			$timeout(function(){
 
+         			toastr.success("Tenant activo", "Accion");
         			tenant.isActive = status;
     			},0); 
     		});
@@ -49,6 +51,7 @@
     		service.deactivate(tenant).then(function(status){
     			$timeout(function(){
 
+         			toastr.success("Tenant inactivo", "Accion");
         			tenant.isActive = status;
     			},0); 
     		});
@@ -57,6 +60,7 @@
     		service.deletet(tenant).then(function(status){
     			$timeout(function(){
 
+         			toastr.success("Tenant borrado", "Accion");
         			tenant.isActive = status;
     			},0); 
     		});
